@@ -1,0 +1,23 @@
+# Render Blueprint. В дашборде: New → Blueprint → выбрать этот репозиторий.
+# https://dashboard.render.com/blueprints
+services:
+  - type: web
+    name: doors-shop
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /
+    envVars:
+      # Генерируется Render автоматически, вводить не нужно
+      - key: PAYLOAD_SECRET
+        generateValue: true
+      - key: DATABASE_URL
+        value: file:/app/data/doors.db
+      - key: LEADS_EXCEL_PATH
+        value: /app/data/leads.xlsx
+      # Заполнить в дашборде при создании сервиса (см. README)
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT_ID
+        sync: false

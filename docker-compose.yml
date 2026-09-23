@@ -1,0 +1,22 @@
+services:
+  doors:
+    build: .
+    image: doors-shop:latest
+    container_name: doors-shop
+    restart: unless-stopped
+    ports:
+      - '3100:3000'
+    env_file: .env
+    environment:
+      DATABASE_URL: file:/app/data/doors.db
+      LEADS_EXCEL_PATH: /app/data/leads.xlsx
+    volumes:
+      - ./data:/app/data
+      - ./media:/app/media
+    # Сервер общий: не даём сайту съесть память соседних проектов
+    mem_limit: 600m
+    logging:
+      driver: json-file
+      options:
+        max-size: '10m'
+        max-file: '2'

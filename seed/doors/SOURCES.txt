@@ -1,0 +1,15 @@
+Демо-фото дверей: Unsplash, бесплатная лицензия Unsplash (коммерческое использование разрешено, указание автора не требуется).
+Все файлы проверены: страницы помечены "Free Photo on Unsplash" (не Unsplash+).
+Версия 1200 px по ширине.
+
+DEMO-001 Классика 01: https://unsplash.com/photos/opened-white-wooden-door-3PWBgE7IpaI
+DEMO-002 Классика 02: https://unsplash.com/photos/a-dimly-lit-hallway-with-a-white-door-and-key-qfP5WkFz-Ak
+DEMO-003 Классика 03 со стеклом: https://unsplash.com/photos/black-wooden-framed-glass-door-9r4RVJMOyYs
+DEMO-004 Модерн 01: https://unsplash.com/photos/open-wooden-door-V3KpDE4WlW8
+DEMO-005 Модерн 02: https://unsplash.com/photos/a-room-that-has-a-wooden-door-in-it-fUSb6H6oeis
+
+Это демо-картинки. Перед запуском сайта заменить на фото реальных дверей магазина.
+
+Фото карточек фабрик (seed/factories):
+fabrika-1.jpg: то же, что баннер (seed/hero-source.txt).
+fabrika-2.jpg: Unsplash, "An empty room with an open door leading to another room" (Free Photo): https://unsplash.com/photos/an-empty-room-with-an-open-door-leading-to-another-room-PXH-YeqWdFA

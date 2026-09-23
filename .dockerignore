@@ -1,0 +1,21 @@
+node_modules
+.next
+.git
+.vscode
+tests
+test-results
+playwright-report
+blob-report
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+
+# рабочие данные разработчика: в образ идёт только deploy/doors.db и deploy/media
+/data
+/media
+/doors.db
+/doors.db-*
+
+# исходники демо-фото не нужны в образе, там же лежит уже собранная deploy/media
+/seed
