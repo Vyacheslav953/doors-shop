@@ -4,7 +4,10 @@
 FROM node:22-slim AS deps
 WORKDIR /app
 COPY package.json package-lock.json ./
-RUN npm ci --no-audit --no-fund
+# Не npm ci: lock-файл собран на Windows, а часть необязательных транзитивных зависимостей
+# npm на Linux считает обязательными (иначе список отличается от сборки к сборке) — npm ci
+# на этом падает («Missing: ... from lock file»). npm install сам доустановит недостающее.
+RUN npm install --no-audit --no-fund
 
 FROM node:22-slim AS builder
 WORKDIR /app
